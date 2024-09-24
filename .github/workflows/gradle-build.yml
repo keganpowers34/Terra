@@ -45,3 +45,8 @@ jobs:
           properties: |
             kotlin.js.compiler=ir
             kotlin.parallel.tasks.in.project=true
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Terra
+          path: build/libs/*.jar
